@@ -18,7 +18,7 @@ public class CrunchifyRESTServiceClient {
  
 			// Step1: Let's 1st read file from fileSystem
 //			InputStream crunchifyInputStream = new FileInputStream("/Users/<username>/Documents/CrunchifyJSON.txt");
-			InputStream crunchifyInputStream = new FileInputStream("/Users/<username>/Documents/CrunchifyJSON.txt");
+			InputStream crunchifyInputStream = new FileInputStream("CrunchifyJSON.txt");
 			InputStreamReader crunchifyReader = new InputStreamReader(crunchifyInputStream);
 			BufferedReader br = new BufferedReader(crunchifyReader);
 			String line;
@@ -31,7 +31,7 @@ public class CrunchifyRESTServiceClient {
  
 			// Step2: Now pass JSON File Data to REST Service
 			try {
-				URL url = new URL("http://localhost:8080/CrunchifyTutorials/api/crunchifyService");
+				URL url = new URL("http://localhost:8080/RESTTutorial/api/crunchifyService");
 				URLConnection connection = url.openConnection();
 				connection.setDoOutput(true);
 				connection.setRequestProperty("Content-Type", "application/json");
